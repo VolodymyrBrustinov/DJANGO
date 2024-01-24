@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Таблиця множення</title>
+</head>
+<body>
+    <h1>Таблиця множення</h1>
+
+    <table border="1">
+        <tr>
+            <th>Число</th>
+            <th>Результат множення на 1</th>
+            <th>Результат множення на 2</th>
+            <th>Результат множення на 3</th>
+            <th>Результат множення на 4</th>
+            <th>Результат множення на 5</th>
+            <th>Результат множення на 6</th>
+            <th>Результат множення на 7</th>
+            <th>Результат множення на 8</th>
+            <th>Результат множення на 9</th>
+            <th>Результат множення на 10</th>
+        </tr>
+            {% for record in multiplication_records %}
+        <tr>
+           <td>{{ record.number }}</td>
+            <td>{{ record.number }}</td>
+            <td>{{ record.number|add:record.number }}</td>
+            <td>{{ record.number|add:record.number|add:record.number }}</td>
+            <td>{{ record.number|add:record.number|add:record.number|add:record.number }}</td>
+           <td>{{ record.number|add:record.number|add:record.number|add:record.number|add:record.number }}</td>
+            <td>{{ record.number|add:record.number|add:record.number|add:record.number|add:record.number|add:record.number }}</td>
+           <td>{{ record.number|add:record.number|add:record.number|add:record.number|add:record.number|add:record.number|add:record.number }}</td>
+            <td>{{ record.number|add:record.number|add:record.number|add:record.number|add:record.number|add:record.number|add:record.number|add:record.number }}</td>
+           <td>{{ record.number|add:record.number|add:record.number|add:record.number|add:record.number|add:record.number|add:record.number|add:record.number|add:record.number }}</td>
+            <td>{{ record.number|add:record.number|add:record.number|add:record.number|add:record.number|add:record.number|add:record.number|add:record.number|add:record.number|add:record.number }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</body>
+</html>
+
+
